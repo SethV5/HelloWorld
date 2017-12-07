@@ -1,0 +1,5 @@
+/Users/sethv5/Desktop/repos/HelloWorld/HelloWorld/bin/Debug/HelloWorld.exe
+/Users/sethv5/Desktop/repos/HelloWorld/HelloWorld/bin/Debug/HelloWorld.pdb
+/Users/sethv5/Desktop/repos/HelloWorld/HelloWorld/obj/x86/Debug/HelloWorld.csproj.CoreCompileInputs.cache
+/Users/sethv5/Desktop/repos/HelloWorld/HelloWorld/obj/x86/Debug/HelloWorld.exe
+/Users/sethv5/Desktop/repos/HelloWorld/HelloWorld/obj/x86/Debug/HelloWorld.pdb
