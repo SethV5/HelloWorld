@@ -43,14 +43,29 @@ namespace HelloWorld
             // to add out two numbers we can do this:
             // Console.WriteLine(number1 + number2);
             // We can also subtract:
-            Console.WriteLine(number1 - number2);
+            //Console.WriteLine(number1 - number2);
             // Clicking ona  variable will highlight where that variable comes up, can help if it is misspeltor something of the sort for debugging. Like how you can click on the closing brackets and it will highlight the respectivve opening bracket for you.
-        
-        
-        
-        
-        
-        
-        }
+            // Methods or functions() like in javascript:
+            // Made a line to CALL and DISPLAY my public method named AddTwoNumbers
+            // Console.WriteLine(AddTwoNumbers());
+            // what are the values? or the argument?
+            Console.WriteLine(AddTwoNumbers(number1, number2));
+            
+        } // This is the closing bracket for the first method called "Main"
+                          // This is the name of the method    
+        public static float AddTwoNumbers(float n1, float n2)
+//          ^ |      |    ^                 ^    ^
+// means      |      | Not void             Declares the type of variable: float
+// it's       |      | becasue it           the name of the variable "n1"
+// accessible |      | is returning
+// Anywhere   |      | a value
+        // The issue is saying that i dont have code that can give the method a value
+        {
+            // Made a variable that is a float and adds our n1 and n2 variables.
+            float result = n1 + n2;
+            // returns the resul of variable "result"
+            return result;
+        }   
+    
     }
 }
