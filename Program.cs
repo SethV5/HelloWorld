@@ -15,7 +15,7 @@ namespace HelloWorld
             // Print to console what i type:
             // Console.WriteLine(input);
             // Output this to user:
-            Console.WriteLine("Write Two Numbers");
+            // Console.WriteLine("Write Two Numbers");
             // Made and declared two variables:
             // string number1 = Console.ReadLine();
             // string number2 = Console.ReadLine();
@@ -36,14 +36,14 @@ namespace HelloWorld
             // float number1 = float.Console.ReadLine();
             // float number2 = float.Console.ReadLine();
             // Now to parse something is to analys a string of symbols, either in natural language or in computer languages, and converts it into an outputed number.
-            float number1 = float.Parse(Console.ReadLine());
-            float number2 = float.Parse(Console.ReadLine());
+            // float number1 = float.Parse(Console.ReadLine());
+            // float number2 = float.Parse(Console.ReadLine());
             // Print it to user:
             // Console.WriteLine(number1 + " " + number2);
             // to add out two numbers we can do this:
             // Console.WriteLine(number1 + number2);
             // We can also subtract:
-            //Console.WriteLine(number1 - number2);
+            // Console.WriteLine(number1 - number2);
             // Clicking ona  variable will highlight where that variable comes up, can help if it is misspeltor something of the sort for debugging. Like how you can click on the closing brackets and it will highlight the respectivve opening bracket for you.
             // Methods or functions() like in javascript:
             // Made a line to CALL and DISPLAY my public method named AddTwoNumbers
@@ -51,17 +51,34 @@ namespace HelloWorld
             // what are the values? or the argument?
             // Console.WriteLine(AddTwoNumbers(number1, number2));
             // ask the user what he wants to do
-            Console.WriteLine("Select an option\n1. Add\n2. Subtract\n3. Multiply\n4. Divide");
+            // Console.WriteLine("Select an option\n1. Add\n2. Subtract\n3. Multiply\n4. Divide");
             // Read what the user inputs
             // Console.ReadLine();
             // declare a new integer variable called option
-            int option = int.Parse(Console.ReadLine());
-            //Console.WriteLine(AddTwoNumbers(number1, number2));
+ 
+            // Console.WriteLine(AddTwoNumbers(number1, number2));
             // caling the method, and passing the option variable, number1 variable, number2 variable into argument. 
-            EvaluateOption(option, number1, number2);
+            // EvaluateOption(option, number1, number2);
+            Start();
 
         } // This is the closing bracket for the first method called "Main"
-          // This is the name of the method    
+
+		public static void Start()
+		{
+            Console.WriteLine("Write Two Numbers");
+
+                float number1 = float.Parse(Console.ReadLine());
+                float number2 = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Select an option\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Quit");
+		    
+            int option = int.Parse(Console.ReadLine());
+
+
+            EvaluateOption(option, number1, number2);
+        }
+
+        // This is the name of the method    
         public static float AddTwoNumbers(float n1, float n2)
         //          ^ |      |    ^                 ^    ^
         // means      |      | Not void             Declares the type of variable: float
@@ -115,11 +132,19 @@ namespace HelloWorld
             {
                 Console.WriteLine("Result of division: " + DivideTwoNumbers(n1, n2));
             }
+
+			else if (option == 5)
+			{
+				Console.WriteLine("Goodbye!");
+                return;
+			}
+
             else
             {
-                // Do nothing
+                Console.WriteLine("Invalid option");
             }
 
+            Start(); // Call Start again
         }
     }
 
