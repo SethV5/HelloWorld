@@ -113,39 +113,31 @@ namespace HelloWorld
 
         public static void EvaluateOption(int option, float n1, float n2)
         {
-            if (option == 1)
+            switch (option)
             {
+
+            case 1:
                 Console.WriteLine("Result of addition: " + AddTwoNumbers(n1, n2));
-            }
-
-            else if (option == 2)
-            {
+                    break;
+            case 2:
                 Console.WriteLine("Result of subtraction: " + SubtractTwoNumbers(n1, n2));
-            }
-
-            else if (option == 3)
-            {
+                    break;
+            case 3:
                 Console.WriteLine("Result of multiplication: " + MultiplyTwoNumbers(n1, n2));
-            }
-
-            else if (option == 4)
-            {
+                    break;
+            case 4:
                 Console.WriteLine("Result of division: " + DivideTwoNumbers(n1, n2));
-            }
-
-			else if (option == 5)
-			{
-				Console.WriteLine("Goodbye!");
-                return;
-			}
-
-            else
-            {
+                    break;
+            case 5:
+                Console.WriteLine("Goodbye!");
+                    return;
+            default:
                 Console.WriteLine("Invalid option");
+                    break;
             }
 
             Start(); // Call Start again
-        }
-    }
-
-}
+		}
+ 
+     }
+ }
